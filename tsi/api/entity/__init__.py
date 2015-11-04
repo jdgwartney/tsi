@@ -25,3 +25,25 @@ def get(**kwargs):
 
 def update(**kwargs):
     pass
+
+
+class EntityApi(object):
+
+    def __init__(self):
+        pass
+
+    def create(self,**kwargs):
+        o = {}
+        return o
+
+    def delete(self,**kwargs):
+        o = {}
+        return o
+
+    def delete(self,**kwargs):
+        o = {}
+        return o
+
+    def update(self,**kwargs):
+        o = {}
+        return o

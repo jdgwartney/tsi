@@ -14,5 +14,6 @@
 # limitations under the License.
 #
 
+from .api import Api
 from .entity import Entity
 from .metric import Metric
