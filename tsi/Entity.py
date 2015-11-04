@@ -14,9 +14,10 @@
 # limitations under the License.
 #
 
-from tsi import Api
+from tsi.api_object import ApiObject
 
-class Entity(object):
+
+class Entity(ApiObject):
 
     def __init__(self,
                  cfg_attr_values=None,
@@ -27,6 +28,7 @@ class Entity(object):
                  parent_entity_id=None,
                  source_id=None
                  ):
+        ApiObject.__init__(self)
 
         self._cfg_attr_values = cfg_attr_values
         self._entity_id = entity_id

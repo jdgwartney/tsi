@@ -14,26 +14,30 @@
 # limitations under the License.
 #
 
-from tsi.api_object import ApiObject
+from api_object import ApiObject
 
 
-class MetaApi(ApiObject):
+class Meta(ApiObject):
 
-    def __init__(self, api_key=None):
-        pass
+    def __init__(self, attributes=None, id=None, metrics=None, name=None):
+        ApiObject.__init__(self)
+        self._attributes = attributes
+        self._id = id
+        self._metrics = metrics
+        self._name = name
 
-    def create(self, **kwargs):
-        o = {}
-        return o
+    @property
+    def attributes(self):
+        return self._attributes
 
-    def delete(self, **kwargs):
-        o = {}
-        return o
+    @property
+    def id(self):
+        return self._id
 
-    def get(self, **kwargs):
-        o = {}
-        return o
+    @property
+    def metrics(self):
+        return self._metrics
 
-    def update(self, **kwargs):
-        o = {}
-        return o
+    @property
+    def name(self):
+        return self._name

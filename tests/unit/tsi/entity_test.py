@@ -16,19 +16,19 @@
 #
 
 from unittest import TestCase
-from tsi import Api
-from tsi import Meta
+from tsi import Entity
 
 
-class ApiTest(TestCase):
+class EntityTest(TestCase):
 
     def setUp(self):
-        self.api = Api()
+        self.entity = Entity()
 
-    def test_create_meta(self):
-        m = Meta()
+    def test_init(self):
+        m = Entity()
 
-        self.api.meta.create()
+        self.assertIsNotNone(m)
 
-    def test_get_meta(self):
-        meta = self.api.meta.get()
+    def test_get_entity(self):
+        # meta = self.api.meta.get()
+        pass

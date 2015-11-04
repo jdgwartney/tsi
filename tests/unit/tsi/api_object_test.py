@@ -16,19 +16,19 @@
 #
 
 from unittest import TestCase
-from tsi import Api
-from tsi import Meta
+from tsi import ApiObject
 
 
-class ApiTest(TestCase):
+class ApiObjectTest(TestCase):
 
     def setUp(self):
-        self.api = Api()
+        self.api_object = ApiObject()
 
-    def test_create_meta(self):
-        m = Meta()
+    def test_init(self):
+        m = ApiObject()
 
-        self.api.meta.create()
+        self.assertIsNotNone(m)
 
     def test_get_meta(self):
-        meta = self.api.meta.get()
+        # meta = self.api.meta.get()
+        pass

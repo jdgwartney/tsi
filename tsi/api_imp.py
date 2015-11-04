@@ -1,12 +1,11 @@
-#!/usr/bin/env python
 #
-# Copyright 2014-2015 Boundary, Inc.
+# Copyright 2015 BMC Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#      http://www.apache.org/licenses/LICENSE-2.0
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,20 +14,26 @@
 # limitations under the License.
 #
 
-from unittest import TestCase
-from tsi import Api
-from tsi import Meta
+from tsi.api.entity import EntityApi
+from tsi.api.meta import MetaApi
 
 
-class ApiTest(TestCase):
+class Api(object):
 
-    def setUp(self):
-        self.api = Api()
+    def __init__(self, api_key=None):
+        self._api_key = api_key
+        self._entity = EntityApi(api_key=api_key)
+        self._meta = MetaApi(api_key=api_key)
 
-    def test_create_meta(self):
-        m = Meta()
+    @property
+    def entity(self):
+        return self._entity
 
-        self.api.meta.create()
+    @property
+    def meta(self):
+        pass
 
-    def test_get_meta(self):
-        meta = self.api.meta.get()
+    @property
+    def metric(self):
+        pass
+

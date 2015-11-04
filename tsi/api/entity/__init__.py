@@ -32,18 +32,18 @@ class EntityApi(object):
     def __init__(self):
         pass
 
-    def create(self,**kwargs):
+    def create(self, **kwargs):
         o = {}
         return o
 
-    def delete(self,**kwargs):
+    def delete(self, **kwargs):
         o = {}
         return o
 
-    def delete(self,**kwargs):
+    def get(self, **kwargs):
         o = {}
         return o
 
-    def update(self,**kwargs):
+    def update(self, **kwargs):
         o = {}
         return o
