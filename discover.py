@@ -15,6 +15,7 @@
 
 import json
 import pycurl
+import os
 
 #-------------------------------------------------------
 # Specify api key
@@ -32,34 +33,25 @@ headers = ['Expect:', 'Content-Type: application/json' ,  'X-API-KEY: ' + apikey
 
 newEntity =  {
         "entity_type_id": "APPLICATION",
-        "name": "Online Auction",
+        "name": "Random",
         "tags": [
-            "app_id:online_auc"
+            "app_id:random"
         ],
         "cfg_attr_values": {},
-        "entity_id": "online_auc",
-        "source_id": "sample",
+        "entity_id": "random",
+        "source_id": "random",
         "cfg_attr_values":
            {
                "kpis":[
-                {"entity_type_id":"TRANSACTION",
-                  "entity_type_name":"Transaction",
-                  "entity_id":"oa-appserver-1.bid_tx",
-                  "title":"Number of Requests",
-                  "application_id":"online_auc",
-                  "application_name":"Online Auction",
-                  "metric_name":"Number of Requests",
-                  "metric_uom":"#",
-                  "metric_id":"number_of_requests"},
                  {"entity_type_id":"TRANSACTION",
                   "entity_type_name":"Transaction",
                   "entity_id":"oa-appserver-1.bid_tx",
-                  "title":"Request Response Time",
-                  "application_id":"online_auc",
-                  "application_name":"Online Auction",
-                  "metric_name":"Request Response Time",
-                  "metric_uom":"Seconds",
-                  "metric_id":"request_response_time"}
+                  "title":"Number of Requests",
+                  "application_id":"random",
+                  "application_name":"Random",
+                  "metric_name":"Number of Requests",
+                  "metric_uom":"#",
+                  "metric_id":"random"}
                   ]
            }
     }
@@ -182,25 +174,17 @@ c.close()
 #-------------------------------------------------------
 
 myMetaData = {
-    "id": "TRANSACTION",
-    "name": "Transaction",
+    "id": "random",
+    "name": "Random",
     "metrics": [
        {
-            "id": "number_of_requests",
-            "name": "Number of Requests",
-            "data_type": "number",
-            "uom": "#",
-            "kpi": "True",
-            "key": "True",
-       },
-       {
-            "id": "request_response_time",
-            "name": "Request Response Time",
-            "data_type": "number",
-            "uom": "Seconds",
-            "kpi": "True",
-            "key": "False" 
-        }
+         "id": "random",
+         "name": "Random",
+         "data_type": "number",
+         "uom": "#",
+         "kpi": "True",
+         "key": "True",
+       }
     ]
 }
 
