@@ -15,18 +15,18 @@
 # limitations under the License.
 #
 
-from unittest import TestCase
+import unittest
 from tsi import Api
-from tsi import Meta
 
 
-class ApiTest(TestCase):
+class ApiTest(unittest.TestCase):
 
     def setUp(self):
         self.api = Api()
+        self.meta = self.api.Meta()
 
     def test_create_meta(self):
-        m = Meta()
+        m = self.api.Meta()
 
         self.api.meta.create()
 

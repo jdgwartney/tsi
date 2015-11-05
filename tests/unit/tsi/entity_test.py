@@ -15,11 +15,11 @@
 # limitations under the License.
 #
 
-from unittest import TestCase
+import unittest
 from tsi import Entity
 
 
-class EntityTest(TestCase):
+class EntityTest(unittest.TestCase):
 
     def setUp(self):
         self.entity = Entity()

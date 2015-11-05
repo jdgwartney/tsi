@@ -15,11 +15,11 @@
 # limitations under the License.
 #
 
-from unittest import TestCase
+import unittest
 from tsi import Meta
 
 
-class MetaTest(TestCase):
+class MetaTest(unittest.TestCase):
 
     def setUp(self):
         self.meta = Meta()

@@ -22,18 +22,24 @@ class Api(object):
 
     def __init__(self, api_key=None):
         self._api_key = api_key
-        self._entity = EntityApi(api_key=api_key)
-        self._meta = MetaApi(api_key=api_key)
+        self._entity = EntityApi()
+        self._event = EventApi()
+        self._meta = MetaApi()
+
 
     @property
     def entity(self):
         return self._entity
 
     @property
+    def event(self):
+        return self._event
+
+    @property
     def meta(self):
-        pass
+        self._meta
 
     @property
     def metric(self):
-        pass
+        self._metric
 

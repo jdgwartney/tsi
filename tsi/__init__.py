@@ -14,8 +14,15 @@
 # limitations under the License.
 #
 
-from .api_imp import Api
-from .api_object import ApiObject
-from .entity import Entity
-from .meta import Meta
-from .metric import Metric
+# from .api_imp import Api
+# from .api_object import ApiObject
+# from .entity import Entity
+# from .meta import Meta
+# from .metric import Metric
+
+
+def Meta():
+    return api.meta
+
+
+__all__ = ["Meta", "Metric"]

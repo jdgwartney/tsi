@@ -15,5 +15,23 @@
 #
 
 
-def create(**kwargs):
-    pass
+class EntityApi(ApiCall):
+
+    def __init__(self, api_key=None):
+        ApiCall(self, api_key=api_key)
+
+    def create(self, **kwargs):
+        o = {}
+        return o
+
+    def delete(self, **kwargs):
+        o = {}
+        return o
+
+    def get(self, **kwargs):
+        o = {}
+        return o
+
+    def update(self, **kwargs):
+        o = {}
+        return o

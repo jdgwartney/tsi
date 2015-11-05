@@ -15,11 +15,11 @@
 # limitations under the License.
 #
 
-from unittest import TestCase
+import unittest
 from tsi import ApiObject
 
 
-class ApiObjectTest(TestCase):
+class ApiObjectTest(unittest.TestCase):
 
     def setUp(self):
         self.api_object = ApiObject()
