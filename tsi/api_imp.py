@@ -27,19 +27,4 @@ class Api(object):
         self._meta = MetaApi()
 
 
-    @property
-    def entity(self):
-        return self._entity
-
-    @property
-    def event(self):
-        return self._event
-
-    @property
-    def meta(self):
-        self._meta
-
-    @property
-    def metric(self):
-        self._metric
 

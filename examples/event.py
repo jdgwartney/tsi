@@ -14,26 +14,8 @@
 # limitations under the License.
 #
 
-from tsi.api_object import ApiObject
+from tsi import Api
+
+api = Api()
 
 
-class MetaApi(ApiObject):
-
-    def __init__(self, api_key=None):
-        pass
-
-    def create(self, **kwargs):
-        o = {}
-        return o
-
-    def delete(self, **kwargs):
-        o = {}
-        return o
-
-    def get(self, **kwargs):
-        o = {}
-        return o
-
-    def update(self, **kwargs):
-        o = {}
-        return o
